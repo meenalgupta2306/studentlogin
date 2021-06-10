@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title student management
+    block style
+    block script
+  body 
+    nav#navbar 
+          div#lead
+            a.logo LEAD logo
+          div#person 
+            div#icon 
+              div.icon
+                img(id="noti" src="/static/image/notification.png", alt="") 
+              div.kleft
+                img(id="user" src="/static/image/user.png", alt="") 
+              div.kname
+                a.name Person Name
+
+    section#container
+      nav#student 
+        table#myTable
+          thead
+            tr.ro 
+              th.pq STUDENTS 
+            tr.ro
+              th(class="button1" data-modal="modalOne" class="pq") #[a(href="/student") View Students ]
+            tr.ro
+              th(class="button2" data-modal="modalTwo" class="pq") #[a(href="/student/add") Add Students ]
+            
+  block content
+  block script

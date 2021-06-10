@@ -1,0 +1,24 @@
+.ex1 {
+    height: 57vh;
+  }
+
+.th{
+    padding: 8px 5px;
+    font-size: 22px;
+    background-color: rgb(123 175 217);
+    border: 2px solid black;
+}
+#studentTable tr{
+    display: table-row;
+}
+#studentTable td{
+    padding: 3px 40px;
+    font-weight: bold;
+    font-size: 17px;
+}
+#studentTable{
+    border-collapse: collapse;
+}
+#studentTable tr:nth-child(even){background-color: #adabab}
+#studentTable tr:nth-child(odd){background-color: #d4d1d1}
+

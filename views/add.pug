@@ -1,0 +1,75 @@
+extends base.pug
+block style 
+    style 
+        include ../static/student.css
+block content
+    div(id="modalTwo" class="addstudent" )
+            div(class="add-content")
+                div(class="add-form")
+                    form(name="myform2" action="/add" class="addform" method="post" )
+                        h1 Add Student 
+                        div.row 
+                          div.col1 
+                            label(for="name") Full Name 
+                          div.col2
+                            input(class="slide" type="text" name="name" id="n" required)
+                        div.row 
+                          div.col1 
+                            label(for="age") Age
+                          div.col2
+                            input(class="slide" type="Number" name="age" id="a" required)
+                        div.row 
+                          div.col1 
+                            label(for="dob") Date Of Birth
+                          div.col2
+                            input(class="slide" type="date" name="dob" id="dob" required)
+                      
+                        div.row 
+                          div.col1  
+                            label(for="school") School
+                          div.col2
+                            select(class="slide" name="school" placeholder="School" id="s" required)
+                              <option value="" disabled selected> School </option> 
+                              <option value="LEAD School Karmala"> LEAD School Karmala </option>
+                              <option value="St. Thomas School"> St. Thomas School </option> 
+                              <option value="Loyola High School"> Loyola High School </option>
+                        div.row 
+                          div.col1 
+                            label(for="class") Class
+                          div.col2
+                            select(class="slide" name="class" placeholder="Class" id="c" required)
+                              option(value="" disabled selected) Class
+                              option(value="1" type="Number") 1
+                              option(value="2" type="Number") 2
+                              option(value="3" type="Number") 3
+                              option(value="4" type="Number") 4
+                              option(value="5" type="Number") 5
+                        div.row 
+                          div.col1 
+                              label(for="division") Division
+                          div.col2
+                            select(class="slide" name="division" placeholder="Class" id="d" required)
+                              option(value="" disabled selected) Division
+                              option(value="a") A
+                              option(value="b") B
+                              option(value="c") C
+                              option(value="d") D
+                              option(value="e") E
+                        div.row 
+                          div.col1
+                            label(for="status") Status 
+                          div.col2#down
+                            input(type="radio", name="status" value="active")
+                            label(for="active") Active 
+                            input(type="radio", name="status" value="status")
+                            label(for="status") Status 
+                        div.row
+                          div.col2
+                            button(type="submit" href="/" class="addsubmit" onsubmit="return validateForm()") Submit
+
+
+
+    script(src="/static/table.js")
+
+
+
